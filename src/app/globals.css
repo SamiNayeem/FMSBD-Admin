@@ -25,3 +25,30 @@ body {
     text-wrap: balance;
   }
 }
+
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%); /* Start below the section */
+  }
+  100% {
+    transform: translateY(0); /* End at the normal position */
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(0%); /* Start below the section */
+  }
+  100% {
+    transform: translateY(100); /* End at the normal position */
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-in-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.8s ease-in-out forwards;
+}
