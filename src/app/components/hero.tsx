@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const Hero: React.FC = () => {
+  
   return (
     <section className="relative w-full h-screen flex items-center justify-center bg-gray-100">
       {/* Left Diagonal Section with Image and Animation */}
@@ -28,12 +29,22 @@ const Hero: React.FC = () => {
           width={300}
           height={200}
         />
-        <a
-          href="#features"
-          className="bg-blue-500 text-white px-8 py-2 rounded-3xl text-lg hover:bg-blue-600"
-        >
-          Get Started
-        </a>
+        <a href="#about-us" className="px-5 py-2.5 relative rounded group overflow-hidden text-blue-900 inline-block font-bold font-roboto">
+  <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-blue-600 group-hover:h-full opacity-90"></span>
+  
+  <span className="relative flex items-center group-hover:text-white transition-all duration-300">
+    Get Started
+    <svg
+      className="w-5 h-5 ml-2 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-2 transition-all duration-200"
+      fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 12h14"></path>
+      <path d="M12 5l7 7-7 7"></path>
+    </svg>
+  </span>
+</a>
+
+
       </div>
 
       {/* Right Diagonal Section with Image and Animation */}

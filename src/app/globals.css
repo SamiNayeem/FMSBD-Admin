@@ -7,11 +7,15 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+html{
+  scroll-behavior: smooth;
 }
 
 body {
@@ -51,4 +55,40 @@ body {
 
 .animate-slide-down {
   animation: slideDown 0.8s ease-in-out forwards;
+}
+
+/* From Uiverse.io by Cksunandh */
+.cssloader {
+  margin: 0 auto;
+}
+
+.triangle1 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 50px 0 0;
+  border-color: #8086e0 transparent transparent transparent;
+  animation: shk1 1s ease-in-out infinite normal;
+}
+
+.triangle2 {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 50px;
+  border-color: transparent transparent #6554b388 transparent;
+  margin: -50px auto 0;
+  animation: shk2 1s ease-in-out infinite alternate;
+}
+
+@keyframes shk1 {
+  0% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes shk2 {
+  0% {
+    transform: rotate(360deg);
+  }
 }

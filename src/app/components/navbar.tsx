@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
@@ -21,6 +21,14 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
+  // Smooth scroll function
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav
       className={`fixed w-full z-20 top-0 left-0 transition-all duration-300 ease-in-out ${
@@ -28,7 +36,7 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="container mx-auto flex justify-between items-center px-20">
-        <a href="/" className="text-2xl font-bold text-gray-800 flex items-center">
+        <a href="#" className="text-2xl font-bold text-gray-800 flex items-center">
           <Image
             src="/logo-fmsbd.png"
             alt="Logo"
@@ -39,13 +47,13 @@ const Navbar: React.FC = () => {
         </a>
         <ul className="flex space-x-6 text-gray-600">
           <li>
-            <a href="#features" className="hover:text-gray-800">Features</a>
+            <a onClick={() => scrollToSection('about-us')} className="cursor-pointer hover:text-gray-800">About</a>
           </li>
           <li>
-            <a href="#about" className="hover:text-gray-800">About</a>
+            <a onClick={() => scrollToSection('join-us')} className="cursor-pointer hover:text-gray-800">Join Us</a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-gray-800">Contact</a>
+            <a onClick={() => scrollToSection('contact-us')} className="cursor-pointer hover:text-gray-800">Contact</a>
           </li>
         </ul>
         <a href="/signin" className="bg-blue-500 text-white px-4 py-2 rounded-3xl hover:bg-blue-600">
